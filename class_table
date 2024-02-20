@@ -1,0 +1,5 @@
+create table class_data(
+i_d serial PRIMARY KEY,
+class_name varchar(50) NOT NULL,
+class_number integer NOT NULL,
+class_teacher_i_D  varchar(10) NOT NULL);
