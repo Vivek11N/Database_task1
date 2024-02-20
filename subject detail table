@@ -1,0 +1,7 @@
+subject details table
+
+
+create table sub(
+i_d serial PRIMARY KEY,
+sub_name varchar(50) NOT NULL,
+sub_code integer NOT NULL);
