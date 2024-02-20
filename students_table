@@ -1,14 +1,16 @@
-CREATE TABLE IF NOT EXISTS public.teachers_data
+students table
+
+CREATE TABLE IF NOT EXISTS public.students_records
 (
-    i_d integer NOT NULL DEFAULT nextval('teachers_data_i_d_seq'::regclass),
-    t_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    t_subjects character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    email character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    i_d integer NOT NULL,
+    s_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    s_class integer NOT NULL,
+    g_name character varying(50) COLLATE pg_catalog."default",
     contact_number character varying(10) COLLATE pg_catalog."default",
-    CONSTRAINT teachers_data_pkey PRIMARY KEY (i_d)
+    CONSTRAINT students_records_pkey PRIMARY KEY (i_d)
 )
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS public.teachers_data
+ALTER TABLE IF EXISTS public.students_records
     OWNER to postgres;
